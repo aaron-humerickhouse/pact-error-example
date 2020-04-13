@@ -1,0 +1,77 @@
+I, [2020-04-13T02:53:26.775381 #64029]  INFO -- : Registered expected interaction GET /api/v1/locations.json
+D, [2020-04-13T02:53:26.775847 #64029] DEBUG -- : {
+  "description": "a request for retrieving locations",
+  "providerState": "there is a list of locations",
+  "request": {
+    "method": "GET",
+    "path": "/api/v1/locations.json",
+    "query": {
+    },
+    "headers": {
+      "Accept": "application/json"
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "locations": [
+        {
+          "json_class": "Pact::ArrayLike",
+          "contents": {
+            "id": {
+              "json_class": "Pact::SomethingLike",
+              "contents": 1
+            },
+            "name": {
+              "json_class": "Pact::SomethingLike",
+              "contents": "Bedside Table Bowl"
+            },
+            "lane_count": {
+              "json_class": "Pact::SomethingLike",
+              "contents": 24
+            },
+            "has_restaurant": {
+              "json_class": "Pact::SomethingLike",
+              "contents": true
+            },
+            "has_bar": {
+              "json_class": "Pact::SomethingLike",
+              "contents": true
+            },
+            "address_id": {
+              "json_class": "Pact::SomethingLike",
+              "contents": 2
+            },
+            "created_at": {
+              "json_class": "Pact::Term",
+              "data": {
+                "generate": "2020-04-13T03:21:34.548Z",
+                "matcher": {
+                  "json_class": "Regexp",
+                  "o": 0,
+                  "s": "^\\d{4}-[01]\\d-[0-3]\\dT[0-2]\\d:[0-5]\\d:[0-5]\\d\\.\\d{3,}([+-][0-2]\\d:[0-5]\\d|Z)$"
+                }
+              }
+            },
+            "updated_at": {
+              "json_class": "Pact::Term",
+              "data": {
+                "generate": "2020-04-13T03:21:34.548Z",
+                "matcher": {
+                  "json_class": "Regexp",
+                  "o": 0,
+                  "s": "^\\d{4}-[01]\\d-[0-3]\\dT[0-2]\\d:[0-5]\\d:[0-5]\\d\\.\\d{3,}([+-][0-2]\\d:[0-5]\\d|Z)$"
+                }
+              }
+            }
+          },
+          "min": 2
+        }
+      ]
+    }
+  },
+  "metadata": null
+}
